@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: lightcoral;
+    text-align: center;
+    margin: 0;
+    padding: 0px;
+    padding-bottom: 30px;
+    color: white;
+}
+
+header ul {
+    /* background-color: black;
+    display: flex;
+    min-height: 10vh;
+    text-align: center;
+    justify-content: center; */
+    /* position: fixed; */
+
+    display: flex;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 200;
+    justify-content: center;
+    list-style-type: none;
+    border-bottom: 0.1rem solid white;
+    position: fixed;
+    top: 0%;
+    background: black;
+    width: 100%;
+    z-index: 1;
+}
+
+header ul li {
+    display: flex;
+    padding: 20px 30px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.cart-holder {
+    position:absolute;
+    top: 20px;
+    right: 30px;
+    text-decoration: none;
+    color: white;
+    border: 3px solid steelblue;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+header h1 {
+    max-height: 10vh;
+    padding: 40px;
+    margin: 60px 5px;
+    font-size: 80px;
+    color: black;
+}
+
+.container{
+    padding: 20px 30px;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+section h2 {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+#tshirt-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#tshirt-content div{
+    margin: 30px;
+}
+
+#tshirt-content div h3 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+/* .image-container img{
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+} */
+
+
+.image-container {
+    overflow: hidden;
+    width: 300px;
+    padding: 30px;
+}
+
+.prod-images{
+    transform-origin: center center;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    transition: ease-in 0.5s;
+    filter: brightness(100%);
+}
+
+#tshirt-content .prod-details {
+    display: flex;
+    margin: 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#tshirt-content .shop-item-button {
+    cursor: pointer;
+    padding: 8px;
+    color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    background: lightcoral;
+}
+
+#cart {
+    margin: 0px;
+    display: none;
+    position: fixed;
+    top: 50px;
+    height: 95%;
+    right: 0;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 15px;
+    min-height: 50vh;
+}
+
+#cart h2 {
+    margin: 20px 0px;
+    padding: 0;
+}
+
+.cancel {
+    position: absolute;
+    cursor: pointer;
+    color: rgb(121, 117, 117);
+    top: 15px;
+    right: 0;
+    margin: 20px;
+    background: none;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid rgb(121, 117, 117);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.cart-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cart-row {
+    font-size: 18px;
+    display: flex;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+
+.cart-total {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 1.2rem;
+    margin: 20px;
+}
+
+.cart-total .total-title {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.purchase-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+    background: steelblue;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+#merch-content div {
+    margin: 30px;
+}
+
+#merch-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#merch-content div h3 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#merch-content .shop-item-button {
+    cursor: pointer;
+    padding: 8px;
+    color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    background: lightcoral;
+}
+
+#merch-content .prod-details {
+    display: flex;
+    margin: 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-btn-bottom {
+    display: flex;
+    padding: 15px;
+    background-color:lightcoral;
+    border: none;
+    border-radius: 15px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.cart-bottom {
+    text-decoration: none;
+    color: white;
+}
+
+#container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+
+footer {
+    display: flex;
+    margin-top: 40px;
+    padding: 20px;
+    background: black;
+}
+
+footer .footer-title {
+    text-align: center;
+    color: white;
+    width: 50%;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+
+footer .footer-icons {
+    /* width: 5%; */
+    /* height: 30%; */
+    /* max-height: 0.5px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer img {
+    height: 30px;
+    width: 40px;
+
+}
+
+.footer-icons ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.footer-icons li {
+    padding: 10px;
+    margin: 0px 20px;
+}
