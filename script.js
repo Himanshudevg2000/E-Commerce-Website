@@ -46,7 +46,9 @@ const parentContainer = document.getElementById("EcommerceContainer");
 parentContainer.addEventListener('click', (e)=> {
 
     if (e.target.className=='cart-holder'){
-        document.querySelector('#cart').style = "display:block;"
+        const cartContainer = document.getElementById('cart-items');
+        cartContainer.innerHTML = ''
+        showCartDetails()
    }
     if (e.target.className=='cancel'){
         document.querySelector('#cart').style = "display:none;"
@@ -77,18 +79,18 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 function addToCart(productId){
-    axios.post('http://localhost:3000/cart', {productId : productId})
+    axios.post('http://localhost:3000/cart', { productId: productId})
         .then(response => {
             // console.log(response)
             if(response.status === 200){
                 notify(response.data.message)
             }else{
-                throw new Error()
+                throw new Error(response.data.message)
             }
         })
         .catch((err) => {
             // console.log(err)
-            notify(err.data.message)
+            notify(err)
         })
 }
 
@@ -102,4 +104,24 @@ function notify(message){
     setTimeout(()=>{
         notification.remove();
     },2500)
+}
+
+function showCartDetails(){
+    axios.get('http://localhost:3000/cart')
+        .then(response => {
+            // console.log(response)
+            if(response.status === 200){
+                response.data.products.forEach(product => {
+                    const cartContainer = document.getElementById('cart-items');
+                    cartContainer.innerHTML += `<li id='cart_li'> <img style="width: 80px" src=${product.imageUrl}> </img> - ${product.price} - ${product.cartItem.quantity}   </li>`
+                    cartContainer.style = "list-style-type: none; padding: 1rem;"
+                    console.log(product);
+                })
+                document.querySelector('#cart').style = "display:block;"
+            }
+
+        })
+        .catch(err => {
+            console.log(err)
+        })
 }
