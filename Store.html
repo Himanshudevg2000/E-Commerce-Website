@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <div id="EcommerceContainer">
         <header>
@@ -15,18 +16,23 @@
                 <li><a href="/Home.html">HOME</a></li>
                 <li><a href="/Store.html">STORE</a></li>
                 <li><a href="/about.html">ABOUT</a></li>
-                <a href="#cart" class="cart-holder">cart<span class='cart-number'>0</span></a>
+                <li><a href="/orders.html">ORDERS</a></li>
+                <a href="#cart" class="cart-holder">Cart<span class='cart-number'></span></a>
             </ul>
             <h1>T-SHIRT STORE</h1>
         </header>
         <!-- Displaying to frontend -->
-        <section id="Products"  class="container">
-            <h2>Products</h2>
+        <section class="container">
+            <h2>T-SHIRTS</h2>
 
-        <!-- </section> -->
+            <div id="Products">
+                
+            </div>
+
+            <!-- </section> -->
 
 
-        <!-- <section  class="container">
+            <!-- <section  class="container">
             <h2>T-SHIRTS</h2>
             <div  id ="tshirt-content">
                 <div id='album1'>
@@ -34,7 +40,7 @@
                     <div class="image-container">
                         <img class="prod-images" src="https://images.bewakoof.com/t640/godspeed-oversized-fit-t-shirt-539977-1662114511-1.jpg" alt="">
                     </div>
-                                    <div class="prod-details">
+                    <div class="prod-details">
                         <span>$<span>12.99</span></span>
                         <button  class="shop-item-button" type='button'>ADD TO CART</button>
                     </div>
@@ -133,7 +139,7 @@
             <div class="cart-total">
                 <span>
                     <span class='total-title'> <strong>Total</strong>
-                        </span>
+                    </span>
                     $<span id='total-value'>0</span>
                 </span>
             </div>
@@ -144,6 +150,15 @@
     </div>
     <!-- Toggle notification -->
     <div id="container"></div>
+
+    <section class="pagination">
+        <button class="pagination_btn" id="?page=1">1</button>
+        <button class="pagination_btn" id="?page=2">2</button>
+        <button class="pagination_btn" id="?page=3">3</button>
+        <button class="last_btn" id="?page=3">last</button>
+        <!-- <button class="pagination_btn" id="?page=4">4</button> -->
+    </section>
+
     <footer>
         <div class="footer-title">
             T-Shirt Store
@@ -151,17 +166,23 @@
         <div class="footer-icons">
             <ul>
                 <li><a href="https://www.youtube.com">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo6VS4dEm3ZZ4sUu58E1DZp7LCrk4wiV905Q&usqp=CAU" alt="">
-                </a></li>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo6VS4dEm3ZZ4sUu58E1DZp7LCrk4wiV905Q&usqp=CAU"
+                            alt="">
+                    </a></li>
                 <li><a href="https://spotify.com">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-6zfycYFUwJF1XSg9Sj6EL-c5kSiJVAd_cg&usqp=CAU" alt="">
-                </a></li>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-6zfycYFUwJF1XSg9Sj6EL-c5kSiJVAd_cg&usqp=CAU"
+                            alt="">
+                    </a></li>
                 <li><a href="https://facebook.com">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLLQRcQNsL-4fiuI2piwaoiF_dDASnE4skDA&usqp=CAU" alt="">
-                </a></li>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLLQRcQNsL-4fiuI2piwaoiF_dDASnE4skDA&usqp=CAU"
+                            alt="">
+                    </a></li>
             </ul>
         </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
+
 </html>

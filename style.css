@@ -47,13 +47,15 @@ header ul li a {
 
 .cart-holder {
     position:absolute;
-    top: 20px;
-    right: 30px;
+    top: 25px;
+    right: 60px;
     text-decoration: none;
-    color: white;
-    border: 3px solid steelblue;
-    border-radius: 10px;
-    padding: 3px;
+    /* color: white; */
+    /* border: 3px solid steelblue; */
+    font-size: 20px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 8px 18px;
 }
 
 header h1 {
@@ -74,19 +76,20 @@ section h2 {
     text-align: center;
     padding: 20px;
     font-size: 30px;
+    background-color: lightgray;
 }
 
-#tshirt-content{
+#Products{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-#tshirt-content div{
+#Products div{
     margin: 30px;
 }
 
-#tshirt-content div h3 {
+#Products div h3 {
     display: block;
     width: 100%;
     text-align: center;
@@ -102,10 +105,12 @@ section h2 {
 } */
 
 
-.image-container {
+#album1 {
     overflow: hidden;
-    width: 300px;
-    padding: 30px;
+    width: 280px;
+    /* padding: 20px; */
+    /* border: 2px solid black; */
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
 }
 
 .prod-images{
@@ -119,14 +124,14 @@ section h2 {
     filter: brightness(100%);
 }
 
-#tshirt-content .prod-details {
+#Products .prod-details {
     display: flex;
     margin: 8px;
     align-items: center;
     justify-content: space-between;
 }
 
-#tshirt-content .shop-item-button {
+#Products .shop-item-button {
     cursor: pointer;
     padding: 8px;
     color: white;
@@ -134,13 +139,13 @@ section h2 {
     font-size: 15px;
     font-weight: bold;
     border-radius: 15px;
-    background: lightcoral;
+    background: steelblue;
 }
 
 #cart {
     margin: 0px;
     display: none;
-    position: fixed;
+    position: absolute;
     top: 50px;
     height: 95%;
     right: 0;
@@ -321,4 +326,31 @@ footer img {
 .footer-icons li {
     padding: 10px;
     margin: 0px 20px;
+}
+
+section.pagination{
+    justify-content: center;
+    text-align: center;
+}
+
+.pagination_btn {
+    background-color: whitesmoke;
+    border: 2px solid steelblue;
+    padding: 0.5rem;
+    margin: 0 10px;
+}
+.last_btn {
+    background-color: whitesmoke;
+    border: 2px solid steelblue;
+    padding: 0.5rem;
+    margin: 0 10px;
+}
+
+.pagination_btn:hover{
+    background-color: steelblue;
+    color: white;
+}
+.last_btn:hover{
+    background-color: steelblue;
+    color: white;
 }
