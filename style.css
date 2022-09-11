@@ -124,6 +124,10 @@ section h2 {
     filter: brightness(100%);
 }
 
+.prod-images:hover{
+    transform: scale(1);
+}
+
 #Products .prod-details {
     display: flex;
     margin: 8px;
@@ -211,7 +215,7 @@ section h2 {
     font-size: 1.5rem;
 }
 
-.purchase-btn {
+#purchase-btn {
     display: flex;
     align-items: center;
     justify-content: center;

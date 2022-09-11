@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orders</title>
     <link rel="stylesheet" href="style.css">
+    <script src="orders.js" defer></script>
     <style>
         main{
+            margin: 100px 60px;
             min-height: 80vh;
         }
     </style>
@@ -19,12 +21,13 @@
                 <li><a href="/Home.html">HOME</a></li>
                 <li><a href="/Store.html">STORE</a></li>
                 <li><a href="/about.html">ABOUT</a></li>
-                <li><a href="/orders.html">ORDERS</a></li>
+                <li> <a href="/orders.html">ORDERS</a></li>
+                <!-- <button id="btn" type="submit">ALL orders</button> -->
             </ul>
 
             </header>
 
-            <main>
+            <main class="yourorders" id="main-content">
 
             </main>
             
@@ -47,5 +50,7 @@
                         </ul>
                     </div>
                 </footer>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        ></script>
 </body>
 </html>
